@@ -1,0 +1,17 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - chrome
+  chrome:
+    image: selenium/standalone-chrome
+    ports:
+      - "4444:4444"
+      - "7900:7900"
+    volumes:
+      - chrome-data:/home/seluser/.config/google-chrome
+
+volumes:
+  chrome-data:
