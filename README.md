@@ -35,6 +35,11 @@ The Selenium container exposes a noVNC interface on port `7900`. Visit
 `http://localhost:7900` in your browser and log in with the default password
 `secret` to observe the Chrome session.
 
+Use this interface for **one-time logins** to third-party sites. The Chrome
+profile is stored in the `chrome-data` volume, so any cookies or session data
+saved during a manual login will persist and be reused by `selenium_portal`
+automation.
+
 ## Endpoints
 
 - `POST /plan` – create a story plan from a topic.
