@@ -72,6 +72,17 @@ curl -X POST http://localhost:8000/run-daily \
 In production, call this endpoint from a cron job or other scheduler to run
 the workflow daily.
 
+## Publishing and Extensions
+
+`Publisher` currently logs the URI of each rendered video. Extend this class to
+support additional destinations:
+
+- Social platforms such as YouTube, TikTok or Instagram.
+- Storage services like Amazon S3 or Google Cloud Storage.
+
+Custom implementations can authenticate with external services, upload the
+rendered asset and return a link or identifier.
+
 ## Maintainers
 
 See [PROMPT.md](PROMPT.md) for guidance on style headers, lens constraints, and dialogue conventions.
