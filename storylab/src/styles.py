@@ -1,5 +1,6 @@
 """Style rotation utilities."""
 
+from datetime import date
 from typing import List
 
 
@@ -14,3 +15,14 @@ class StyleRotator:
         style = self.styles[self._index]
         self._index = (self._index + 1) % len(self.styles)
         return style
+
+    def style_for_date(self, day: date) -> str:
+        """Return a deterministic style for the given date.
+
+        The selection cycles through the available styles based on the
+        ordinal value of ``day``. This ensures the same style is returned for
+        the same date and that styles rotate daily.
+        """
+
+        index = day.toordinal() % len(self.styles)
+        return self.styles[index]

@@ -1,6 +1,6 @@
 """Daily scheduler."""
 
-from typing import Dict, List
+from typing import Dict
 
 from .gpt_planner import GPTPlanner
 from .veo_client import VeoClient
