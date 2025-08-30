@@ -71,3 +71,8 @@ curl -X POST http://localhost:8000/run-daily \
 
 In production, call this endpoint from a cron job or other scheduler to run
 the workflow daily.
+
+## Maintainers
+
+See [PROMPT.md](PROMPT.md) for guidance on style headers, lens constraints, and dialogue conventions.
+
